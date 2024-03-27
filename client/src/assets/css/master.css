@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@layer base {
+    body {
+        @apply font-primary overflow-x-hidden;
+    }
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="password"]:focus,
+    textarea:focus {
+        outline: none;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    button {
+        cursor: pointer;
+    }
+    .container {
+        @apply !w-5/6 sm:!w-nine max-w-6xl;
+    }
+    .container-fluid {
+        @apply !w-nine mx-auto;
+    }
+}
+@tailwind components;
+
+@layer components {
+    .trans {
+        @apply transition-colors duration-300 ease-in-out;
+    }
+    .t-trans {
+        @apply transition-transform duration-300 ease-in-out;
+    }
+    .before-t-trans::before {
+        @apply transition-transform duration-300 ease-in-out;
+    }
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+    .flex-between {
+        @apply flex justify-between items-center;
+    }
+
+    .abs-center {
+        @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+    .page-link-1 {
+        @apply text-gray-500 trans hover:text-dark-50;
+    }
+    .page-link-2 {
+        @apply text-dark-50 trans hover:text-dark relative mx-auto  w-fit block  text-lg overflow-hidden before:content-['']  before:absolute before:bg-gradient-to-tl before:from-gradient-0 before:to-gradient-1 before:w-full before:h-[3px] before:rounded-2xl before:scale-x-0  before:bottom-0  hover:before:scale-x-100 hover:before:origin-right before:transition-transform before:duration-300 before:ease-in-out before:origin-left;
+    }
+    .menu {
+        @apply w-9 h-9;
+    }
+
+    .btn-1 {
+        @apply rounded-full px-8 py-2 block outline-1 outline-primary outline w-fit text-xl transition-[outline] duration-500 ease-out font-medium font-maven relative before:content-[''] before:absolute before:bg-gradient-to-tl before:from-gradient-0 before:to-gradient-1 before:w-full before:h-full before:top-0 before:left-0 before:rounded-full before:scale-x-0 before:origin-right before:-z-[1] hover:before:scale-x-100 hover:before:origin-left trans delay-150 hover:text-light before:transition-transform before:duration-300 before:ease-in-out overflow-hidden hover:outline-gradient-1;
+    }
+}
+@tailwind utilities;
+
+@layer utilities {
+    .my-aspect {
+        padding-top: 56.25%;
+    }
+    .custom-scroll-x::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #777;
+    }
+
+    .custom-scroll-x::-webkit-scrollbar {
+        height: 10px;
+        background-color: transparent;
+    }
+
+    .custom-scroll-x::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: theme("colors.indigo.500");
+    }
+    @font-face {
+        font-family: custom-font;
+        src: url("../fonts/primary-font.ttf") format("opentype");
+    }
+}

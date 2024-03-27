@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "CommonJS",
+        "rootDir": "./src",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "lib": ["dom", "ES2022"],
+        "baseUrl": "./",
+        "paths": {
+            "~/*": ["./src/*"],
+            "@/*": ["./src/app/*"]
+        },
+        "sourceMap": true,
+        "outDir": "./dist",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "skipLibCheck": true
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist"],
+    "files": ["src/index.ts"]
+}
